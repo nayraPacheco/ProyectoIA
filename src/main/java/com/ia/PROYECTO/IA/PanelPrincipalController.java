@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class PanelPrincipalController {
-    @GetMapping("/PanelPrincipal")
+    @GetMapping("/PantallaPrincipal")
     public String PanelPrincipal() {
         return "PantallaPrincipal";
     }

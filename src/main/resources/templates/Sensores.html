@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de sensores</title>
+</head>
+<body>
+<h1>Lista de sensores</h1>
+<table class="Sensor_table">
+<thead>
+<tr>
+    <th>Id</th>
+    <th>IdZona</th>
+    <th>Bateria</th>
+    <th>Estado</th>
+    <th>Ultima actualizacion</th>
+    <th>Name</th>
+    <th>Sensor_type</th>
+    <th>Status</th>
+    <th>Created_at</th>
+</tr>
+</thead>
+    <tbody>
+    <tr th:each="sensor : ${sensores}">
+        <th th:text="${sensor.idSensores}"></th>
+        <th th:text="${sensor.idZona}"></th>
+        <th th:text="${sensor.Bateria}"></th>
+        <th th:text="${sensor.Estado}"></th>
+        <th th:text="${sensor.UltimaActualizacion}"></th>
+        <th th:text="${sensor.name}"></th>
+        <th th:text="${sensor.sensor_type}"></th>
+        <th th:text="${sensor.status}"></th>
+        <th th:text="${sensor.created_at}"></th>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
