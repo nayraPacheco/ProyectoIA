@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Lista de sensores</title>
@@ -24,13 +24,13 @@
     <tr th:each="sensor : ${sensores}">
         <th th:text="${sensor.idSensores}"></th>
         <th th:text="${sensor.idZona}"></th>
-        <th th:text="${sensor.Bateria}"></th>
-        <th th:text="${sensor.Estado}"></th>
-        <th th:text="${sensor.UltimaActualizacion}"></th>
+        <th th:text="${sensor.bateria}"></th>
+        <th th:text="${sensor.estado}"></th>
+        <th th:text="${sensor.ultimaActualizacion}"></th>
         <th th:text="${sensor.name}"></th>
-        <th th:text="${sensor.sensor_type}"></th>
+        <th th:text="${sensor.sensorType}"></th>
         <th th:text="${sensor.status}"></th>
-        <th th:text="${sensor.created_at}"></th>
+        <th th:text="${sensor.createdAt}"></th>
     </tr>
     </tbody>
 </table>

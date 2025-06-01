@@ -24,7 +24,7 @@ public class Sensor {
     @Enumerated (EnumType.STRING)
     private sensor_type sensorType;
     public enum sensor_type{
-        huminity,temperature,ph,conductuvity
+        humidity,temperature,ph,conductuvity
     }
     @Column(name="status")
     @Enumerated (EnumType.STRING)
