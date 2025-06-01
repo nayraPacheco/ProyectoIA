@@ -14,5 +14,34 @@
     <a href="/Configuracion"> Configuracion</a>
 
 </div>
+promedio: <span id="promedio">cargando</span>
+<table class="Sensor_table">
+    <thead>
+    <tr>
+        <th>IdZona</th>
+        <th>Bateria</th>
+        <th>Estado</th>
+        <th>Ultima actualizacion</th>
+        <th>Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="sensor : ${sensores}">
+        <th th:text="${sensor.idZona}"></th>
+        <th th:text="${sensor.bateria}"></th>
+        <th th:text="${sensor.estado}"></th>
+        <th th:text="${sensor.ultimaActualizacion}"></th>
+        <th th:text="${sensor.name}"></th>
+    </tr>
+    </tbody>
+</table>
+<script>
+    fetch('/api/promedio_humedad')
+    .then(response=> response.text())
+    .then(promedio=> {
+        console.log(promedio)
+        document.getElementById('promedio').textContent=promedio;})
+    .catch(error=> {document.getElementById('promedio').textContent='error';})
+</script>
 </body>
 </html>
